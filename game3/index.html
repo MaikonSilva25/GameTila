@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aventuras Lógicas do Tilinho</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Aventuras Lógicas do Tilinho</h1>
+
+      <div id="age-selection">
+        <h2>Qual a sua idade?</h2>
+        <button onclick="startGame(6, 7)">6 a 7 anos</button>
+        <button onclick="startGame(8, 9)">8 a 9 anos</button>
+        <button onclick="startGame(10, 11)">10 a 11 anos</button>
+      </div>
+
+      <div id="game-area" style="display: none">
+        <div id="question-container"></div>
+        <button id="next-button" style="display: none">Próxima Pergunta</button>
+        <div id="feedback" class="feedback"></div>
+        <div id="game-progress">
+          <p>
+            Pergunta: <span id="current-question">0</span> de
+            <span id="total-questions">5</span>
+          </p>
+        </div>
+      </div>
+
+      <div id="end-screen" style="display: none">
+        <h2>Fim do Jogo!</h2>
+        <p id="final-score"></p>
+        <button onclick="restartGame()">Jogar Novamente</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
